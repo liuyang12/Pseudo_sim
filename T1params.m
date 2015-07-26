@@ -1,6 +1,12 @@
 %% Various Parameters
+% [al] aluminum current collector
+% [p]  positive electrode
+% [s]  separator
+% [n]  negative electrode
+% [co] copper current collector
 Prob1.K.C = 1;
-lal= 10e-6;
+% Region thickness
+lal= 10e-6; 
 lp = 80e-6;
 ls = 25e-6;
 ln = 88e-6;
@@ -20,7 +26,7 @@ dxco = lco/(Nco+1);
 eps_p = 0.385;    % Porosity on the positive electrode side
 eps_s = 0.724;
 eps_n = 0.485;
-eps_i = [eps_p;eps_s;eps_n];
+eps_i = [eps_p;eps_s;eps_n];    % Porosity
 
 eps_fi= [0.025;0;0.0326];
 brugg_p = 4;      % Bruggeman coefficient

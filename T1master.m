@@ -8,12 +8,17 @@ global Prob1
 
 Time = 5000; % Duration of discharge/charge
 Nt= 500; % Number of time intervals
+% [al] aluminum current collector
+% [p]  positive electrode
+% [s]  separator
+% [n]  negative electrode
+% [co] copper current collector
 
-Nal=5;
-Np= 25;  % Number of spatial intervals on the positive electrode side
-Ns= 5;  % Number of spatial intervals in the separator
-Nn= 25;
-Nco=5;
+Nal=5;      % 
+Np= 25;     % Number of spatial intervals on the positive electrode side
+Ns= 5;      % Number of spatial intervals in the separator
+Nn= 25;     % Number of spatial intervals on the negative electrode side
+Nco=5;      % 
 
 dt = Time/Nt; % Size of time interval in secs
 
