@@ -1,8 +1,10 @@
-function [ dy ] = cartrhs( t, y )
+function [ dy ] = cartrhs( t, y, I, D)
 %CARTRHS RHS of cartoon model by Brian Wetton, July 27, 2015
 %   CARTRHS - implementation by Yang Liu, July 31, 2015
 %   Detailed explanation goes here
 %   y is a column vector dimensioned 2N*1 [c(1:N) a(1:N)]
+%   I = 2.6;    % applied current - 1C current of 2600mAh battery
+%   D = 0.5;    % parameter D
 %   c(x,t) - Lithium electrolyte concentration
 %   a(x,t) - average concentration in the grain
 %   V(x,t) - solid phase voltage
@@ -20,8 +22,6 @@ V0 = 0.5*ones(1,N);     % absolute initial value of vector V
 phi0 = 0.5*ones(1,N);   % absolute initial value of vector phi
 j0 = 0.5*ones(1,N);     % absolute initial value of vector j
 x_0 = [V0 phi0 j0];     % absolute initial values of vector x
-I = 2.6;    % applied current - 1C current of 2600mAh battery
-D = 0.5;    % parameter D
 persistent x0;          % persistant vector x0 [use the result of Newton method as initial vector of next time step]
 if isempty(x0)
     x0 = x_0;           % absolute initial value of vecor x0
