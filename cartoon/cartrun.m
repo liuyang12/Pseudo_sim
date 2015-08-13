@@ -80,9 +80,9 @@
 % dF = jacobian(dy, y);       % Jacobian matrix of cartoon model symbolically
 clear all; close all;
 % symbolic expressions of Cartoon model
-global c a V phi j
-global y dy dF
-global N I D % parameters of the model
+global c a V phi j  % global variables of cartoon model
+global y dy dF      % function element of the model
+global N I D        % parameters of the model
 N = 5;      % number of intervals
 I = 0.1;    % current
 D = 0.5;    % parameter D describing the counter-ion
